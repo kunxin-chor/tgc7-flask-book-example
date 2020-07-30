@@ -1,0 +1,12 @@
+{
+  "genres": {
+    "romance": "Romance",
+    "fantasy": "Fantasy",
+    "military": "War and Military",
+    "science-fic": "Science Fiction"
+  },
+  "categories": {
+      "non-fic":"Non-fiction",
+      "fiction":"Fiction"
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <div>
+            <label>ISBN:</label>
+            <input type="text" name="ISBN"/>
+        </div>
+        <div>
+            <label>Title:</label>
+            <input type="text" name="title"/>
+        </div>
+        <div>
+            <label>Genre:</label>
+            <select name="genre">
+                {% for key, g in settings.genres.items() %}
+                    <option value="{{key}}">{{g}}</option>
+                {%endfor%}
+            </select>
+        </div>
+        <div>
+            <label>Category</label>
+            {% for key, category in settings.categories.items() %}
+                <input type="radio" name="category" value="{{key}}"/>{{category}}
+            {% endfor %}
+        </div>
+        <input type="submit"/>
+    </form>
+</body>
+</html>
